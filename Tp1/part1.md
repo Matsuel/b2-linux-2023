@@ -1,5 +1,7 @@
 # I. Init
 
+*La vm que j'ai utilisé est une venant de lukas et je n'avais pas encore changé de username*
+
 - [I. Init](#i-init)
   - [1. Installation de Docker](#1-installation-de-docker)
   - [2. Vérifier que Docker est bien là](#2-vérifier-que-docker-est-bien-là)
