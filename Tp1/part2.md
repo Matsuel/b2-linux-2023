@@ -199,7 +199,7 @@ ENTRYPOINT ["python3", "app.py"]
 *Check existantce image*
 
 ```bash
-[lytzeer@tp1 python_app_build]$ docker images | grep python_app
+[mat@tp1 python_app_build]$ docker images | grep python_app
 python_app           version_de_ouf   972a9b344a2e   2 minutes ago    190MB
 ```
 
@@ -208,6 +208,6 @@ python_app           version_de_ouf   972a9b344a2e   2 minutes ago    190MB
 - lance l'image avec `docker run` :
 
 ```bash
-[lytzeer@tp1 python_app_build]$ docker run python_app:version_de_ouf
+[mat@tp1 python_app_build]$ docker run python_app:version_de_ouf
 Cet exemple d'application est vraiment naze 👎
 ```
