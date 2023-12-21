@@ -505,7 +505,7 @@ On va donc le lancer de façon interactive : on lance le conteneur, et on pop to
 - ça donne donc :
 
 ```bash
-[lytzeer@tp1 ~]$ docker run -it python bash
+[mat@tp1 ~]$ docker run -it python bash
 Unable to find image 'python:latest' locally
 latest: Pulling from library/python
 bc0734b949dc: Pull complete
