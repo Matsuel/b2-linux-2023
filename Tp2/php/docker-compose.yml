@@ -6,6 +6,12 @@ services:
       - 8080:80
     volumes:
       - ./src/index.php:/var/www/html/index.php
+    command: 
+      - /bin/sh
+      - -c
+      - >
+        echo "App is ready on http://localhost:80" &&
+        apache2-foreground
   mysql:
     image: mysql:latest
     environment:
