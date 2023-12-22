@@ -1,0 +1,39 @@
+version: '3'
+services:
+  php-apache:
+    image: php:8.2.0-apache
+    ports:
+      - 8080:80
+    volumes:
+      - ./src/index.php:/var/www/html/index.php
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_DATABASE: users
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - 3306:3306
+    networks:
+      mysql-phpmyadmin:
+        aliases:
+          - mysql
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - 8081:80
+    networks:
+      mysql-phpmyadmin:
+        aliases:
+          - phpmyadmin
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test
+networks:
+  mysql-phpmyadmin:
+    driver: bridge
