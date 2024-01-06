@@ -33,3 +33,10 @@ PS C:\Users\User\Documents\b2-linux-2023\Tp2\calc_build> docker run -e CALC_PORT
 PS C:\Users\User\Documents\b2-linux-2023\Tp2\calc_build> docker logs 93978d74cb2218502aaa116cd54dcb77a494488162066780fd5c20ae16c981fe
 INFO : Serveur démarré sur le port 9854.
 ```
+
+**Il faut avant tout changer le port du conteneur sinon cela ne fonctionnera pas**
+
+```yml
+ports:
+    - 13337:valeur_du_port
+```
