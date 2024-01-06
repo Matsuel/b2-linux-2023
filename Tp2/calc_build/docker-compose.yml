@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  calculatrice:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: calc:latest
+    container_name: calculatrice
+    environment:
+      - CALC_PORT=13337
+    ports:
+      - 13337:13337
