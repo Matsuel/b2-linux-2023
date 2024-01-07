@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  chat-py:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: 
+      chat:latest
+    container_name: chat-py
+    ports:
+      - "3000:3000"
+    environment:
+      - CHAT_PORT=3000
+      - MAX_USERS=10
